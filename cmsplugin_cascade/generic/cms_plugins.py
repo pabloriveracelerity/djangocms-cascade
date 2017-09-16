@@ -81,11 +81,6 @@ class HeadingPlugin(CascadePluginBase):
             return format_html('<code>{0}</code>: {1} {2}', tag_type, content, identifier)
         return content
 
-    def render(self, context, instance, placeholder):
-        context = self.super(HeadingPlugin, self).render(context, instance, placeholder)
-        context.update({'content': mark_safe(instance.glossary.get('content', ''))})
-        return context
-
 plugin_pool.register_plugin(HeadingPlugin)
 
 
