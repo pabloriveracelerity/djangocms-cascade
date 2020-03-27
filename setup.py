@@ -38,7 +38,7 @@ setup(
     url='https://github.com/jrief/djangocms-cascade',
     packages=find_packages(exclude=['examples', 'docs', 'tests']),
     install_requires=[
-        'jsonfield',
+        'jsonfield==1.0.3',
         'django-cms>=3.4.4',
         'djangocms-text-ckeditor>=3.4.0',
     ],
